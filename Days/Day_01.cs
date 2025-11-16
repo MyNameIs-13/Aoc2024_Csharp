@@ -4,6 +4,8 @@ namespace AdventOfCode;
 // Day_XY class which inherits from BaseDay and contains the Solve functions for the puzzle
 public class Day_01 : BaseDay
 {
+    // TODO:  comment to use real puzzle data, comment out to use example puzzle data
+    protected override string InputFileDirPath => "InputsExample";
 
     // Define class variables
     private readonly (List<int>, List<int>, Dictionary<int, int>) _input;
@@ -46,7 +48,7 @@ public class Day_01 : BaseDay
             result += (value * rightOccurences.GetValueOrDefault(value, 0));
         }
         return result.ToString();
-    }    
+    }
 
     // Function to parse the puzzle input into the required data structure to solve the puzzle
     public static (List<int>, List<int>, Dictionary<int, int>) ParseFileToList(string inputFilePath)
@@ -59,12 +61,12 @@ public class Day_01 : BaseDay
             if (line == "") continue;
             var parts = line.Split((char[])null, System.StringSplitOptions.RemoveEmptyEntries);
             if (parts.Length < 2) continue;
-            
+
             leftValues.Add(int.Parse(parts[0]));
             var rightValue = int.Parse(parts[1]);
             rightValues.Add(rightValue);
             rightOccurences[rightValue] = rightOccurences.GetValueOrDefault(rightValue, 0) + 1;
         }
-        return (leftValues,rightValues, rightOccurences);
+        return (leftValues, rightValues, rightOccurences);
     }
 }
