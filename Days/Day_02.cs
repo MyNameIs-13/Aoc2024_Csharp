@@ -32,6 +32,7 @@ public class Day_02 : BaseDay
         var parsed_input = new List<List<int>>();
         foreach (var line in File.ReadAllLines(InputFilePath))
         {
+            if (String.IsNullOrEmpty(line)) continue;
             parsed_input.Add(line.Split(" ").Select(int.Parse).ToList());
         }
         return parsed_input;
