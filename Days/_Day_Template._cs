@@ -47,5 +47,5 @@ public class Day_XY : BaseDay
     {
         //TODO implement solution for part 2 here. _input can be used and contains the parsed input data
         throw new NotImplementedException();
-
+    }
 }
