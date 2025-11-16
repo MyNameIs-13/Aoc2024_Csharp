@@ -66,12 +66,12 @@ public class Day_03 : BaseDay
             if (match.Value == "do()")
             {
                 isDoActive = true;
-                LogUtils.Debug($"Encountered 'do' at index {match.Index}. Do active: {isDoActive}.");
+                LogUtils.Debug($"Encountered 'do()' at index {match.Index}. Do active.");
             }
             else if (match.Value == "don't()")
             {
                 isDoActive = false;
-                LogUtils.Debug($"Encountered 'don\\'t' at index {match.Index}. Do active: {isDoActive}.");
+                LogUtils.Debug($"Encountered 'don\'t()' at index {match.Index}. Do inactive.");
             }
             else if (match.Value.StartsWith("mul("))
             {
