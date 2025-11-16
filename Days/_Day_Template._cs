@@ -17,6 +17,10 @@ public class Day_XY : BaseDay
         // Initialize class variables
         // Parse the input file here, to avoid deluting the puzzle solution times
         _parsed_input = ParseInput(InputFilePath);
+
+        // TODO enable/disable when needed
+        LogUtils.DebugLogMode = true;
+        // LogUtils.Debug($"DebugLogMode is {LogUtils.DebugLogMode}");
     }
 
     // Solve functions asynchron (called from Program.cs)
