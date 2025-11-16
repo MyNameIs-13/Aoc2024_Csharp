@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Debug .NET Core App",
+    "adapter": "netcoredbg",
+    "request": "launch",
+    "program": "${ZED_WORKTREE_ROOT}/bin/Debug/net9.0/AdventOfCode.dll",
+    "cwd": "${ZED_WORKTREE_ROOT}",
+    "env": {
+      "ASPNETCORE_ENVIRONMENT": "Development",
+      "ASPNETCORE_URLS": "http://localhost:5243"
+    },
+    "build": {
+      "command": "dotnet",
+      "args": [
+        "build",
+        "${ZED_WORKTREE_ROOT}/AdventOfCode.csproj",
+        "-p:Configuration=Debug",
+        "-p:TargetFramework=net9.0"
+      ]
+    }
+  }
+]

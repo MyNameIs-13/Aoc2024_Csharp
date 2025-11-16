@@ -1,0 +1,12 @@
+[
+    {
+        "label": "Run current day",
+        "command": "XY=$(basename ${ZED_FILE} .cs | cut -d'_' -f2); dotnet run $XY;",
+        "reveal": "always",
+        "hide": "never",
+        "shell": "system",
+        "show_summary": false,
+        "show_command": false,
+        "cwd": "$ZED_WORKTREE_ROOT"
+    }
+]
