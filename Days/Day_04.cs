@@ -16,7 +16,7 @@ public class Day_04 : BaseDay
         // Parse the input file here, to avoid deluting the puzzle solution times
         puzzleGrid = GridUtils<char>.CreateCharGrid(InputFilePath);
         // TODO enable/disable when needed
-        LogUtils.DebugLogMode = true;
+        // LogUtils.DebugLogMode = true;
         // LogUtils.Debug($"DebugLogMode is {LogUtils.DebugLogMode}");
     }
 
@@ -40,7 +40,7 @@ public class Day_04 : BaseDay
         return findWordOccurencesInXForm(puzzleGrid, "MAS").ToString();
     }
     
-    private int findWordOccurences(GridUtils<char> grid, string word)
+    private int findWordOccurences(GridUtils<char> grid, ReadOnlySpan<char> word)
     {
         var occurences = 0;
         for (int sy = 0; sy < grid.RowCount; sy++)
@@ -66,7 +66,7 @@ public class Day_04 : BaseDay
         return occurences;
     }
     
-    private int findWordOccurencesInXForm(GridUtils<char> grid, string word)
+    private int findWordOccurencesInXForm(GridUtils<char> grid, ReadOnlySpan<char> word)
     {
         if (word.Length % 2 == 0 || word.Length == 1) throw new ArgumentException("Word must have odd length > 1");
 
@@ -102,7 +102,7 @@ public class Day_04 : BaseDay
     private bool CheckXDiagonalSegment(GridUtils<char> grid, int centerY, int centerX,
                                         (int dy, int dx) leftDir,
                                         (int dy, int dx) rightDir,
-                                        string word, int halfWordLength)
+                                        ReadOnlySpan<char> word, int halfWordLength)
     {
         bool forwardWordMatch = true;
         bool reverseWordMatch = true;
