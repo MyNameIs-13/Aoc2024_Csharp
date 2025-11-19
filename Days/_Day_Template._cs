@@ -1,51 +1,52 @@
 // TODO: replace XY with the numbers of the day
-namespace AdventOfCode;
-
-// Day_XY class which inherits from BaseDay and contains the Solve functions for the puzzle
-public class Day_XY : BaseDay
+namespace AdventOfCode
 {
-    // TODO:  comment to use real puzzle data, comment out to use example puzzle data
-    protected override string InputFileDirPath => "InputsExample";
-
-    // Define class variables
-    // TODO change var type according to parse function
-    private readonly String _parsed_input;
-
-    // Constructor
-    public Day_XY()
+    // Day_XY class which inherits from BaseDay and contains the Solve functions for the puzzle
+    public class Day_XY : BaseDay
     {
-        // Initialize class variables
-        // Parse the input file here, to avoid deluting the puzzle solution times
-        _parsed_input = ParseInput(InputFilePath);
+        // TODO:  comment to use real puzzle data, comment out to use example puzzle data
+        protected override string InputFileDirPath => "InputsExample";
 
-        // TODO enable/disable when needed
-        LogUtils.DebugLogMode = true;
-        // LogUtils.Debug($"DebugLogMode is {LogUtils.DebugLogMode}");
-    }
+        // Define class variables
+        // TODO change var type according to parse function
+        private readonly String _parsed_input;
 
-    // Solve functions asynchron (called from Program.cs)
-    public override ValueTask<string> Solve_1() => new(Solve_1_Synchron());
-    public override ValueTask<string> Solve_2() => new(Solve_2_Synchron());
+        // Constructor
+        public Day_XY()
+        {
+            // Initialize class variables
+            // Parse the input file here, to avoid deluting the puzzle solution times
+            _parsed_input = ParseInput(InputFilePath);
 
-    // Function to parse the puzzle input into the required data structure to solve the puzzle
-    public static String ParseInput(string InputFilePath)
-    {
-        //TODO implement input parse function here. inputFilePath contains the path to the input file
-        // return File.ReadLines(InputFilePath).ToString();
-        return File.ReadAllText(InputFilePath);
-    }
+            // TODO enable/disable when needed
+            LogUtils.DebugLogMode = true;
+            // LogUtils.Debug($"DebugLogMode is {LogUtils.DebugLogMode}");
+        }
 
-    // Synchron implementation to receive solution for puzzle part1
-    private string Solve_1_Synchron()
-    {
-        //TODO implement solution for part 1 here. _input can be used and contains the parsed input data
-        throw new NotImplementedException();
-    }
+        // Solve functions asynchron (called from Program.cs)
+        public override ValueTask<string> Solve_1() => new(Solve_1_Synchron());
+        public override ValueTask<string> Solve_2() => new(Solve_2_Synchron());
 
-    // Synchron implementation to receive solution for puzzle part2
-    private string Solve_2_Synchron()
-    {
-        //TODO implement solution for part 2 here. _input can be used and contains the parsed input data
-        throw new NotImplementedException();
+        // Function to parse the puzzle input into the required data structure to solve the puzzle
+        public static String ParseInput(string InputFilePath)
+        {
+            //TODO implement input parse function here. inputFilePath contains the path to the input file
+            // return File.ReadLines(InputFilePath).ToString();
+            return File.ReadAllText(InputFilePath);
+        }
+
+        // Synchron implementation to receive solution for puzzle part1
+        private string Solve_1_Synchron()
+        {
+            //TODO implement solution for part 1 here. _input can be used and contains the parsed input data
+            throw new NotImplementedException();
+        }
+
+        // Synchron implementation to receive solution for puzzle part2
+        private string Solve_2_Synchron()
+        {
+            //TODO implement solution for part 2 here. _input can be used and contains the parsed input data
+            throw new NotImplementedException();
+        }
     }
 }
