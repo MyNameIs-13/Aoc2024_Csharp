@@ -11,7 +11,7 @@ namespace AdventOfCode
         public Day_08()
         {
             puzzleGrid = GridUtils<char>.CreateCharGrid(InputFilePath);
-            LogUtils.DebugLogMode = true;
+            // LogUtils.DebugLogMode = true;
         }
 
         public override ValueTask<string> Solve_1() => new(Solve_1_Synchron());
