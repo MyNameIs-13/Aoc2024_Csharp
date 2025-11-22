@@ -1,4 +1,3 @@
-// TODO: replace XY with the numbers of the day
 namespace AdventOfCode
 {
     // Day_09 class which inherits from BaseDay and contains the Solve functions for the puzzle
@@ -8,7 +7,6 @@ namespace AdventOfCode
         // protected override string InputFileDirPath => "InputsExample";
 
         // Define class variables
-        // TODO change var type according to parse function
         private readonly int[] _parsed_input;
 
         // Constructor
